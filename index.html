@@ -1,90 +1,743 @@
-# Chat Conversation
+<!DOCTYPE html>
+<html lang="id">
 
-Note: _This is purely the output of the chat conversation and does not contain any raw data, codebase snippets, etc. used to generate the output._
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kampanye Peduli Lingkungan untuk Generasi Muda - Wujudkan Aksi Nyata untuk Bumi Kita">
+    <title>GenGreen - Generasi Hijau Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
 
-### User Input
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo & Brand -->
+            <div class="nav-brand">
+                <div class="logo-circle">🌱</div>
+                <span class="brand-text">GenGreen</span>
+            </div>
 
-Buatkan website kampanye peduli lingkungan untuk generasi muda menggunakan HTML, CSS, dan JavaScript murni (tanpa backend). Website ditujukan untuk lomba desain website sehingga harus memiliki UX/UI yang menarik, modern, dan responsif untuk mobile dan desktop.
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+                <li><a href="#edukasi" class="nav-link">Edukasi</a></li>
+                <li><a href="#aksi" class="nav-link">Aksi Nyata</a></li>
+                <li><a href="#tantangan" class="nav-link">Tantangan</a></li>
+                <li><a href="#komitmen" class="nav-link">Komitmen</a></li>
+            </ul>
 
-Kriteria wajib:
-- Tema: Kampanye Peduli Lingkungan untuk Generasi Muda
-- Desain visual modern, warna dominan hijau dan biru
-- Edukatif dan persuasif
-- Mudah dinavigasi
-- Responsif
-- Bisa dijalankan di localhost
-- Bahasa Indonesia sopan dan mudah dipahami
+            <!-- Dark Mode Toggle -->
+            <div class="nav-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle Dark Mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-Struktur halaman 1 page:
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="floating-particles"></div>
+        </div>
 
-1. Navbar:
-- Logo + Judul kampanye
-- Menu anchor: Beranda, Edukasi, Aksi Nyata, Tantangan, Komitmen
+        <div class="hero-content">
+            <div class="hero-badge fade-in">
+                <span class="badge-icon">🌍</span>
+                <span class="badge-text">Bersama Selamatkan Bumi</span>
+            </div>
 
-2. Hero Section:
-- Judul kampanye kuat dan persuasif
-- Subjudul ajakan aksi lingkungan
-- Tombol Call To Action “Mulai Aksi Sekarang”
+            <h1 class="hero-title fade-in-up">
+                Saatnya <span class="gradient-text">Generasi Muda</span><br>
+                Jadi Pahlawan Lingkungan
+            </h1>
 
-3. Section Edukasi:
-- 3–4 kartu informasi lingkungan
-- Fakta singkat + solusi sederhana
-- Ikon atau ilustrasi
+            <p class="hero-subtitle fade-in-up delay-1">
+                Aksi kecilmu hari ini adalah warisan besar untuk masa depan.
+                Mari bersama ciptakan Indonesia yang lebih hijau, satu langkah nyata setiap hari.
+            </p>
 
-4. Section Aksi Nyata:
-- Daftar aksi ramah lingkungan untuk pelajar
-- Layout card grid
-- Ada efek hover
+            <div class="hero-cta fade-in-up delay-2">
+                <a href="#tantangan" class="btn btn-primary">
+                    <span>Mulai Aksi Sekarang</span>
+                    <span class="btn-icon">→</span>
+                </a>
+                <a href="#edukasi" class="btn btn-secondary">
+                    <span>Pelajari Lebih Lanjut</span>
+                </a>
+            </div>
 
-5. Section Tantangan Mingguan:
-- Checklist aksi hijau
-- Checkbox interi JavaScript
-- Progress bar atau skor aksi
+            <!-- Quick Stats -->
+            <div class="hero-stats fade-in-up delay-3">
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="12500">0</div>
+                    <div class="stat-label">Pemuda Bergerak</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-icon">🌳</div>
+                    <div class="stat-number" data-target="45000">0</div>
+                    <div class="stat-label">Pohon Diselamatkan</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-icon">♻️</div>
+                    <div class="stat-number" data-target="8300">0</div>
+                    <div class="stat-label">Kg Sampah Didaur Ulang</div>
+                </div>
+            </div>
+        </div>
 
-6. Section Komitmen Pengguna:
-- Form nama + pesan komitmen
-- Validasi JavaScript
-- Pesan terima kasih setelah submit
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+            <span>Scroll untuk Jelajah</span>
+        </div>
+    </section>
 
-7. Statistik Lingkungan:
-- Counter angka animasi (JS)
+    <!-- Section Edukasi -->
+    <section class="section section-edukasi" id="edukasi">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Kenali Masalahnya</span>
+                <h2 class="section-title">Fakta Lingkungan yang Harus <span class="highlight">Kita Tahu</span></h2>
+                <p class="section-subtitle">
+                    Memahami masalah adalah langkah pertama untuk menemukan solusi.
+                    Yuk, kenali fakta-fakta penting tentang kondisi lingkungan kita.
+                </p>
+            </div>
 
-8. Footer:
-- Pesan motivasi lingkungan
-- Identitas kampanye
+            <div class="education-grid">
+                <!-- Card 1: Sampah Plastik -->
+                <div class="edu-card reveal">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🗑️</div>
+                    </div>
+                    <h3 class="card-title">Krisis Sampah Plastik</h3>
+                    <div class="card-fact">
+                        <span class="fact-number">7 Juta Ton</span>
+                        <span class="fact-text">sampah plastik diproduksi Indonesia per tahun</span>
+                    </div>
+                    <p class="card-description">
+                        Indonesia adalah penghasil sampah plastik kedua terbesar di dunia.
+                        Plastik sekali pakai yang kita buang hari ini akan bertahan ratusan tahun di lautan.
+                    </p>
+                    <div class="card-solution">
+                        <div class="solution-badge">💡 Solusi Kamu</div>
+                        <p>Gunakan tumbler, tas belanja kain, dan hindari sedotan plastik.
+                            Satu orang bisa mengurangi 100kg plastik per tahun!</p>
+                    </div>
+                </div>
 
-Teknis:
-- Pisahkan file: index.html, style.css, script.js
-- Beri komentar di setiap bagian kode
-- Tambahkan animasi scroll reveal
-- Tambahkan dark mode toggle
-- Tidak gunakan framework
-- Kode rapi dan mudah dipahami pemula
+                <!-- Card 2: Deforestasi -->
+                <div class="edu-card reveal">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🌲</div>
+                    </div>
+                    <h3 class="card-title">Hutan Kita Menghilang</h3>
+                    <div class="card-fact">
+                        <span class="fact-number">1,47 Juta Ha</span>
+                        <span class="fact-text">hutan Indonesia hilang dalam 5 tahun terakhir</span>
+                    </div>
+                    <p class="card-description">
+                        Deforestasi menghancurkan habitat satwa, meningkatkan emisi CO2, dan mengancam keseimbangan
+                        iklim global.
+                        Hutan adalah paru-paru dunia yang harus kita jaga.
+                    </p>
+                    <div class="card-solution">
+                        <div class="solution-badge">💡 Solusi Kamu</div>
+                        <p>Kurangi penggunaan kertas, dukung produk ramah hutan, dan ikut program penanaman pohon.
+                            Setiap pohon yang tumbuh adalah napas untuk generasi selanjutnya.</p>
+                    </div>
+                </div>
 
-Tambahkan juga teks konten kampanye yang orisinal dan tidak generik agar cocok untuk penilaian lomba.
+                <!-- Card 3: Polusi Udara -->
+                <div class="edu-card reveal">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">💨</div>
+                    </div>
+                    <h3 class="card-title">Udara yang Kita Hirup</h3>
+                    <div class="card-fact">
+                        <span class="fact-number">Top 10</span>
+                        <span class="fact-text">kota terpolusi di dunia ada di Indonesia</span>
+                    </div>
+                    <p class="card-description">
+                        Polusi udara menyebabkan jutaan kematian dini setiap tahun.
+                        Kendaraan bermotor dan industri adalah penyumbang terbesar emisi berbahaya.
+                    </p>
+                    <div class="card-solution">
+                        <div class="solution-badge">💡 Solusi Kamu</div>
+                        <p>Gunakan transportasi umum, sepeda, atau jalan kaki untuk jarak dekat.
+                            Tanam tanaman di rumah untuk filter udara alami.</p>
+                    </div>
+                </div>
 
-### Planner Response
+                <!-- Card 4: Krisis Air Bersih -->
+                <div class="edu-card reveal">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">💧</div>
+                    </div>
+                    <h3 class="card-title">Kelangkaan Air Bersih</h3>
+                    <div class="card-fact">
+                        <span class="fact-number">37%</span>
+                        <span class="fact-text">rakyat Indonesia kesulitan akses air bersih</span>
+                    </div>
+                    <p class="card-description">
+                        Pemborosan air, polusi sungai, dan perubahan iklim membuat krisis air semakin nyata.
+                        Air adalah hak dasar yang kini terancam.
+                    </p>
+                    <div class="card-solution">
+                        <div class="solution-badge">💡 Solusi Kamu</div>
+                        <p>Matikan keran saat tidak dipakai, perbaiki kebocoran, dan kumpulkan air hujan.
+                            Hemat 1 liter air = menyelamatkan kehidupan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Saya akan membantu Anda membuat website kampanye peduli lingkungan yang modern dan menarik untuk lomba desain website. Mari saya mulai dengan membuat breakdown tugas dan implementasinya.
+    <!-- Section Aksi Nyata -->
+    <section class="section section-aksi" id="aksi">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Dari Niat ke Tindakan</span>
+                <h2 class="section-title">Aksi Ramah Lingkungan untuk <span class="highlight">Pelajar</span></h2>
+                <p class="section-subtitle">
+                    Tidak perlu menunggu jadi dewasa untuk membuat perubahan.
+                    Ini dia aksi-aksi sederhana yang bisa kamu lakukan mulai hari ini!
+                </p>
+            </div>
 
-*Edited relevant file*
+            <div class="actions-grid">
+                <!-- Aksi 1 -->
+                <div class="action-card reveal">
+                    <div class="action-number">01</div>
+                    <div class="action-icon">📚</div>
+                    <h3 class="action-title">Bekal Ramah Lingkungan</h3>
+                    <p class="action-description">
+                        Bawa bekal dari rumah dengan wadah yang bisa dipakai ulang.
+                        Tidak hanya sehat, tapi juga mengurangi sampah plastik dari kemasan makanan.
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">Kurangi 50-100 plastik/bulan</span>
+                    </div>
+                </div>
 
-*Edited relevant file*
+                <!-- Aksi 2 -->
+                <div class="action-card reveal">
+                    <div class="action-number">02</div>
+                    <div class="action-icon">🚴</div>
+                    <h3 class="action-title">Transportasi Hijau</h3>
+                    <p class="action-description">
+                        Ke sekolah naik sepeda, jalan kaki, atau carpool bareng teman.
+                        Selain menyehatkan, kamu juga mengurangi emisi karbon.
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">Turunkan 120kg CO2/tahun</span>
+                    </div>
+                </div>
 
-### Planner Response
+                <!-- Aksi 3 -->
+                <div class="action-card reveal">
+                    <div class="action-number">03</div>
+                    <div class="action-icon">📄</div>
+                    <h3 class="action-title">Gunakan Kertas Bijak</h3>
+                    <p class="action-description">
+                        Cetak hanya saat perlu, pakai kedua sisi kertas, dan pilih catatan digital.
+                        Setiap lembar yang dihemat adalah pohon yang diselamatkan.
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">Selamatkan 8 pohon/tahun</span>
+                    </div>
+                </div>
 
-Now I'll create the CSS file with modern, premium styling:
+                <!-- Aksi 4 -->
+                <div class="action-card reveal">
+                    <div class="action-number">04</div>
+                    <div class="action-icon">♻️</div>
+                    <h3 class="action-title">Pilah Sampah Sejak Dini</h3>
+                    <p class="action-description">
+                        Pisahkan sampah organik, plastik, kertas, dan logam.
+                        Ajak teman-teman di kelas membuat sistem pemilahan yang fun dan edukatif.
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">80% sampah bisa didaur ulang</span>
+                    </div>
+                </div>
 
-*Edited relevant file*
+                <!-- Aksi 5 -->
+                <div class="action-card reveal">
+                    <div class="action-number">05</div>
+                    <div class="action-icon">🌱</div>
+                    <h3 class="action-title">Berkebun Mini</h3>
+                    <p class="action-description">
+                        Tanam sayuran atau tanaman hias di rumah atau sekolah.
+                        Selain menyerap CO2, kamu juga bisa panen hasil sendiri!
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">1 tanaman = 5kg CO2/tahun</span>
+                    </div>
+                </div>
 
-### Planner Response
+                <!-- Aksi 6 -->
+                <div class="action-card reveal">
+                    <div class="action-number">06</div>
+                    <div class="action-icon">💡</div>
+                    <h3 class="action-title">Hemat Listrik</h3>
+                    <p class="action-description">
+                        Matikan lampu dan elektronik saat tidak dipakai.
+                        Gunakan cahaya alami saat siang hari dan cabut charger dari stopkontak.
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">Hemat 15-20% energi rumah</span>
+                    </div>
+                </div>
 
-Now I'll create the JavaScript file with all interactive functionality:
+                <!-- Aksi 7 -->
+                <div class="action-card reveal">
+                    <div class="action-number">07</div>
+                    <div class="action-icon">🎨</div>
+                    <h3 class="action-title">Upcycle Kreatif</h3>
+                    <p class="action-description">
+                        Sulap barang bekas jadi karya yang berguna: botol jadi pot, kardus jadi organizer.
+                        Kreativitasmu bisa mengurangi sampah!
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">Perpanjang umur 1000+ item/tahun</span>
+                    </div>
+                </div>
 
-*Edited relevant file*
+                <!-- Aksi 8 -->
+                <div class="action-card reveal">
+                    <div class="action-number">08</div>
+                    <div class="action-icon">📢</div>
+                    <h3 class="action-title">Edukasi Sekitar</h3>
+                    <p class="action-description">
+                        Ajak keluarga, teman, dan tetangga untuk peduli lingkungan.
+                        Share tips hijau di media sosial dan jadi role model!
+                    </p>
+                    <div class="action-impact">
+                        <span class="impact-label">Dampak:</span>
+                        <span class="impact-value">1 orang = 10 orang tergerak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-### Planner Response
+    <!-- Section Tantangan Mingguan -->
+    <section class="section section-tantangan" id="tantangan">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Challenge Accepted</span>
+                <h2 class="section-title">Tantangan Hijau <span class="highlight">Minggu Ini</span></h2>
+                <p class="section-subtitle">
+                    Buktikan komitmenmu dengan menyelesaikan tantangan mingguan ini.
+                    Setiap centang adalah langkah nyata menyelamatkan bumi!
+                </p>
+            </div>
 
-Now let me update the task.md and test the website:
+            <div class="challenge-container reveal">
+                <div class="challenge-progress-wrapper">
+                    <div class="progress-header">
+                        <span class="progress-label">Progress Mingguan</span>
+                        <span class="progress-percentage" id="progressPercentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span id="completedCount">0</span> dari <span id="totalCount">7</span> tantangan selesai
+                    </div>
+                </div>
 
-*Edited relevant file*
+                <div class="challenge-list" id="challengeList">
+                    <!-- Challenge Item 1 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge1" class="challenge-checkbox">
+                        <label for="challenge1" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">Bawa Tumbler Sehari Penuh</h4>
+                                <p class="challenge-desc">Tidak beli minuman kemasan plastik selama satu hari</p>
+                                <div class="challenge-reward">+50 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Challenge Item 2 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge2" class="challenge-checkbox">
+                        <label for="challenge2" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">Pilah Sampah di Rumah</h4>
+                                <p class="challenge-desc">Pisahkan organik dan anorganik minimal 3 hari berturut-turut
+                                </p>
+                                <div class="challenge-reward">+75 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Challenge Item 3 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge3" class="challenge-checkbox">
+                        <label for="challenge3" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">No Sedotan Plastik</h4>
+                                <p class="challenge-desc">Tolak sedotan plastik saat beli minuman selama seminggu</p>
+                                <div class="challenge-reward">+40 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Challenge Item 4 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge4" class="challenge-checkbox">
+                        <label for="challenge4" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">Hemat Listrik 1 Jam</h4>
+                                <p class="challenge-desc">Matikan semua lampu dan elektronik tidak terpakai minimal 1
+                                    jam setiap hari</p>
+                                <div class="challenge-reward">+60 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Challenge Item 5 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge5" class="challenge-checkbox">
+                        <label for="challenge5" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">Ajak 1 Teman Peduli</h4>
+                                <p class="challenge-desc">Edukasi minimal 1 orang tentang pentingnya menjaga lingkungan
+                                </p>
+                                <div class="challenge-reward">+100 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Challenge Item 6 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge6" class="challenge-checkbox">
+                        <label for="challenge6" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">Gunakan Tas Belanja Kain</h4>
+                                <p class="challenge-desc">Belanja dengan membawa tas sendiri, tolak kantong plastik</p>
+                                <div class="challenge-reward">+55 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Challenge Item 7 -->
+                    <div class="challenge-item">
+                        <input type="checkbox" id="challenge7" class="challenge-checkbox">
+                        <label for="challenge7" class="challenge-label">
+                            <div class="challenge-check">
+                                <svg viewBox="0 0 24 24" class="check-icon">
+                                    <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="challenge-content">
+                                <h4 class="challenge-title">Tanam 1 Tanaman</h4>
+                                <p class="challenge-desc">Tanam bibit atau rawat tanaman yang sudah ada di rumah/sekolah
+                                </p>
+                                <div class="challenge-reward">+80 Poin Hijau</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Achievement Badge -->
+                <div class="achievement-badge" id="achievementBadge">
+                    <div class="badge-icon">🏆</div>
+                    <h3 class="badge-title">Selamat, Eco Warrior!</h3>
+                    <p class="badge-message">Kamu telah menyelesaikan semua tantangan minggu ini. Terus pertahankan aksi
+                        hijau-mu!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Komitmen -->
+    <section class="section section-komitmen" id="komitmen">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Ikrar Bersama</span>
+                <h2 class="section-title">Nyatakan <span class="highlight">Komitmenmu</span></h2>
+                <p class="section-subtitle">
+                    Perubahan besar dimulai dari janji kecil yang ditepati.
+                    Tulis komitmenmu untuk lingkungan dan jadilah bagian dari gerakan hijau Indonesia!
+                </p>
+            </div>
+
+            <div class="commitment-container reveal">
+                <div class="commitment-form-wrapper">
+                    <form class="commitment-form" id="commitmentForm">
+                        <div class="form-group">
+                            <label for="userName" class="form-label">
+                                <span class="label-text">Nama Lengkap</span>
+                                <span class="label-required">*</span>
+                            </label>
+                            <input type="text" id="userName" name="userName" class="form-input"
+                                placeholder="Masukkan nama lengkapmu" required>
+                            <span class="form-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userCommitment" class="form-label">
+                                <span class="label-text">Komitmen Lingkungan</span>
+                                <span class="label-required">*</span>
+                            </label>
+                            <textarea id="userCommitment" name="userCommitment" class="form-textarea"
+                                placeholder="Contoh: Saya berkomitmen untuk mengurangi penggunaan plastik sekali pakai dan akan membawa tumbler ke sekolah setiap hari..."
+                                rows="5" required></textarea>
+                            <div class="textarea-info">
+                                <span class="char-count">
+                                    <span id="charCount">0</span>/500 karakter
+                                </span>
+                            </div>
+                            <span class="form-error" id="commitmentError"></span>
+                        </div>
+
+                        <div class="form-checkbox-group">
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" class="form-checkbox" required>
+                            <label for="agreeTerms" class="checkbox-label">
+                                Saya berkomitmen untuk mewujudkan aksi nyata demi lingkungan yang lebih baik
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Kirim Komitmen</span>
+                            <span class="btn-icon">✓</span>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">🎉</div>
+                        <h3 class="success-title">Terima Kasih, Pahlawan Lingkungan!</h3>
+                        <p class="success-text">
+                            Komitmenmu telah tercatat. Bersama-sama kita ciptakan masa depan yang lebih hijau.
+                            Jangan lupa untuk terus melakukan aksi nyata setiap hari!
+                        </p>
+                        <button class="btn btn-secondary" id="newCommitmentBtn">
+                            <span>Buat Komitmen Baru</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Commitment Wall Preview -->
+                <div class="commitment-wall">
+                    <h3 class="wall-title">💚 Komitmen Terkini</h3>
+                    <div class="wall-items" id="commitmentWall">
+                        <div class="wall-item">
+                            <div class="wall-avatar">AR</div>
+                            <div class="wall-content">
+                                <div class="wall-name">Anindya Rizky</div>
+                                <div class="wall-message">"Saya akan membawa bekal dari rumah dan tidak akan membeli
+                                    makanan dengan kemasan plastik sekali pakai."</div>
+                                <div class="wall-time">2 jam yang lalu</div>
+                            </div>
+                        </div>
+
+                        <div class="wall-item">
+                            <div class="wall-avatar">FH</div>
+                            <div class="wall-content">
+                                <div class="wall-name">Fahri Hakim</div>
+                                <div class="wall-message">"Mulai hari ini saya berkomitmen untuk ke sekolah naik sepeda
+                                    dan mengajak teman-teman untuk ikut peduli lingkungan."</div>
+                                <div class="wall-time">5 jam yang lalu</div>
+                            </div>
+                        </div>
+
+                        <div class="wall-item">
+                            <div class="wall-avatar">DS</div>
+                            <div class="wall-content">
+                                <div class="wall-name">Dinda Safira</div>
+                                <div class="wall-message">"Saya akan memilah sampah di rumah dan sekolah, serta mengajak
+                                    keluarga untuk melakukan hal yang sama."</div>
+                                <div class="wall-time">1 hari yang lalu</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Statistik -->
+    <section class="section section-statistik">
+        <div class="container">
+            <div class="stats-banner reveal">
+                <div class="stats-header">
+                    <h2 class="stats-title">Dampak Nyata <span class="gradient-text">Gerakan Kita</span></h2>
+                    <p class="stats-subtitle">Angka-angka ini membuktikan bahwa aksi kecil berdampak besar</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box reveal">
+                        <div class="stat-icon-big">🌍</div>
+                        <div class="stat-value" data-target="156">0</div>
+                        <div class="stat-unit">Kota</div>
+                        <div class="stat-label">Terjangkau Kampanye</div>
+                    </div>
+
+                    <div class="stat-box reveal">
+                        <div class="stat-icon-big">👨‍🎓</div>
+                        <div class="stat-value" data-target="48200">0</div>
+                        <div class="stat-unit">Pelajar</div>
+                        <div class="stat-label">Bergabung Gerakan</div>
+                    </div>
+
+                    <div class="stat-box reveal">
+                        <div class="stat-icon-big">🗑️</div>
+                        <div class="stat-value" data-target="92">0</div>
+                        <div class="stat-unit">Ton</div>
+                        <div class="stat-label">Sampah Terpilah</div>
+                    </div>
+
+                    <div class="stat-box reveal">
+                        <div class="stat-icon-big">🌳</div>
+                        <div class="stat-value" data-target="15400">0</div>
+                        <div class="stat-unit">Pohon</div>
+                        <div class="stat-label">Ditanam Bersama</div>
+                    </div>
+                </div>
+
+                <div class="stats-quote reveal">
+                    <div class="quote-icon">"</div>
+                    <p class="quote-text">
+                        Setiap aksi kecil yang kamu lakukan hari ini adalah investasi untuk bumi yang lebih baik besok.
+                        Jangan pernah meremehkan kekuatan satu orang yang peduli.
+                    </p>
+                    <div class="quote-author">— Tim GenGreen Indonesia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-circle">🌱</div>
+                        <span class="brand-text">GenGreen</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Generasi Hijau Indonesia - Mengubah Masa Depan, Satu Aksi Setiap Hari
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📹</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Navigasi</h4>
+                        <ul class="footer-menu">
+                            <li><a href="#beranda">Beranda</a></li>
+                            <li><a href="#edukasi">Edukasi</a></li>
+                            <li><a href="#aksi">Aksi Nyata</a></li>
+                            <li><a href="#tantangan">Tantangan</a></li>
+                            <li><a href="#komitmen">Komitmen</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Kontak</h4>
+                        <ul class="footer-menu">
+                            <li>📧 info@gengreen.id</li>
+                            <li>📱 0812-3456-7890</li>
+                            <li>📍 Jakarta, Indonesia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 GenGreen Indonesia. Website Kampanye Peduli Lingkungan untuk Lomba Desain Web.</p>
+                    <p class="footer-motto">
+                        <strong>Karena Bumi Tidak Punya Planet B</strong> 🌍💚
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke Atas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
